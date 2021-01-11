@@ -14,7 +14,7 @@ preapre_tmp() {
 
 download() {
     echo "⬇️  Downloading latest package..."
-    git clone --quiet git@github.com:shotastage/neco-tool.git $WORKSPACE/netinst/ >> /dev/null
+    git clone --quiet https://github.com/shotastage/neco-tool.git $WORKSPACE/netinst/ >> /dev/null
 }
 
 destory_old() {
@@ -25,6 +25,7 @@ destory_old() {
 install_new() {
     cp -rf $WORKSPACE/netinst/lib/ $HOME/.nctools/lib/
     mkdir -p $HOME/.nctools/bin/
+    cp -f $WORKSPACE/netinst/nctools.sh $HOME/.nctools/bin/nctools
     cp -f $WORKSPACE/netinst/nc-update.sh $HOME/.nctools/bin/nc-update
 }
 
