@@ -20,6 +20,10 @@ do
             push_to_own_git
             exit 0
             ;;
+        new )
+            create_new_thesis_proj
+            exit 0
+            ;;
         h | help )
             setuptools-help
             exit 0
