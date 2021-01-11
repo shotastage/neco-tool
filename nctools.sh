@@ -17,7 +17,7 @@ for OPT in "$@"
 do
     case $OPT in
         c | chat )
-            open Discord.app
+            open /Applicatons/Discord.app
             exit 0
             ;;
         s | save )
@@ -30,6 +30,10 @@ do
             ;;
         h | help )
             setuptools-help
+            exit 0
+            ;;
+        u | update )
+            nc-update
             exit 0
             ;;
         v | version )
