@@ -16,6 +16,10 @@ splash
 for OPT in "$@"
 do
     case $OPT in
+        c | chat )
+            open Discord.app
+            exit 0
+            ;;
         s | save )
             push_to_own_git
             exit 0
