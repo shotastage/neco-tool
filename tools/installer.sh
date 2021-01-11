@@ -29,7 +29,7 @@ function shell_configure {
     fi
 
     if [ -e $HOME/.config/fish ]; then
-        curl -O https://raw.githubusercontent.com/shotastage/setuptools.sh/master/tools/fish_utils.fish
+        curl -O https://raw.githubusercontent.com/shotastage/neco-tool/master/tools/fish_utils.fish
         chmod +x fish_utils.fish
         fish fish_utils.fish
     fi
@@ -60,16 +60,16 @@ function before_preparation {
 
 
 ##### Check ######################################################################
-if [ -e $HOME/.setuptools/bin/ ]; then
-    echo "👻 setuptools already installed!"
+if [ -e $HOME/.nctools/bin/ ]; then
+    echo "👻 NECO Tools already installed!"
     exit 1
 fi
 
 
-if [ -e $HOME/.setuptools_installation ]; then
+if [ -e $HOME/.nctools_installation ]; then
     echo "👻  Installation directory already exists!"
     echo "👻  Clean existing directory before starting installation."
-    rm -rf $HOME/.setuptools_installation/
+    rm -rf $HOME/.nctools_installation/
 fi
 
 
@@ -82,19 +82,19 @@ cd $HOME
 before_preparation $(operating_system)
 
 # Workspace preparation
-mkdir .setuptools_installation
-cd .setuptools_installation
-git clone https://github.com/shotastage/setuptools.sh.git
+mkdir .nctools_installation
+cd .nctools_installation
+git clone https://github.com/shotastage/neco-tool.git
 
 
 # Main Install Process
-cd setuptools.sh
-mkdir -p $HOME/.setuptools/bin/
-mkdir -p $HOME/.setuptools/lib/
-mkdir -p $HOME/.setuptools/config/
-mv ./lib/ $HOME/.setuptools/
-cp -f uptool.sh $HOME/.setuptools/bin/uptool
-mv uptool-update.sh $HOME/.setuptools/bin/uptool-update
+cd neco-tool
+mkdir -p $HOME/.nctools/bin/
+mkdir -p $HOME/.nctools/lib/
+mkdir -p $HOME/.nctools/config/
+mv ./lib/ $HOME/.nctools/
+cp -f nctools.sh $HOME/.nctools/bin/nctools
+mv nc-update.sh $HOME/.nctools/bin/nc-update
 
 # Shell Configuration
 shell_configure
@@ -103,7 +103,7 @@ shell_configure
 # Cleaning
 echo "🧹  Cleaning..."
 cd
-rm -rf .setuptools_installation/
+rm -rf .nctools_installation/
 
 # Completed!
 echo "🆗  Installation is completed!"
