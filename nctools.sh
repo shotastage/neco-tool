@@ -17,7 +17,7 @@ for OPT in "$@"
 do
     case $OPT in
         c | chat )
-            open /Applicatons/Discord.app
+            open /Applications/Discord.app
             exit 0
             ;;
         s | save )
