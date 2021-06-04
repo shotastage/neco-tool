@@ -93,8 +93,8 @@ mkdir -p $HOME/.nctools/bin/
 mkdir -p $HOME/.nctools/lib/
 mkdir -p $HOME/.nctools/config/
 mv ./lib/ $HOME/.nctools/
-cp -f nctools.sh $HOME/.nctools/bin/nctools
-mv nc-update.sh $HOME/.nctools/bin/nc-update
+cp -f neco.sh $HOME/.nctools/bin/neco
+mv neco-update.sh $HOME/.nctools/bin/neco-update
 
 # Shell Configuration
 shell_configure

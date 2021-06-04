@@ -38,7 +38,7 @@ do
             ;;
         v | version )
             echo
-            echo "NECO Tools 1.1.0"
+            echo "NECO Tools 1.1.1"
             echo "Copyright (C) 2021 Shota Shimazu, All rights reserved."
             echo 
             exit 0
